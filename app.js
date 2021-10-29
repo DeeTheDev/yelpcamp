@@ -54,8 +54,8 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 //============================================== LISTEN to PORT
 //-----------------LISTENING TO APP SERVER
-const hostname = "127.0.0.1";
-const port = 4000;
+const hostname = process.env.HOST || "127.0.0.1";
+const port = process.env.PORT || 5000;
 app.listen(port, hostname, () => {
   console.log(`Server running: http://${hostname}:${port}/`);
 });
