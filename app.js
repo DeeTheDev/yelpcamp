@@ -16,7 +16,7 @@ var indexRoutes = require("./routes/index"), // auth stored here
   commentRoutes = require("./routes/comments");
 
 //mongoDB Atlas Cluster connection - this is the database storage connection
-var mongodb_url = "mongodb+srv://deethedev:lovelove2@yelpcamp.i5f9e.mongodb.net/yelpcamp_v10?retryWrites=true&w=majority"; // v10
+var mongodb_url = process.env.DATABASE_URL; // v10
 mongoose.connect(mongodb_url, { 
   useNewUrlParser: true,
   useUnifiedTopology: true
